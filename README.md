@@ -15,7 +15,7 @@ ADD https://launchpad.net/plone/4.3/4.3.6/+download/Plone-4.3.6-UnifiedInstaller
 ```
 with
 ```
-ADD ./Plone-4.3.6-UnifiedInstaller.tgz /opt/bika/
+COPY ./Plone-4.3.6-UnifiedInstaller.tgz /opt/bika/
 ```
 
 ## Open issues
