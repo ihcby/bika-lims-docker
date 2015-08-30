@@ -27,8 +27,7 @@ RUN apt-get update && apt-get install -y \
     libxslt-dev
 
 
-#ADD https://launchpad.net/plone/4.3/4.3.6/+download/Plone-4.3.6-UnifiedInstaller.tgz /opt/bika/
-COPY ./Plone-4.3.6-UnifiedInstaller.tgz /opt/bika/
+ADD https://launchpad.net/plone/4.3/4.3.6/+download/Plone-4.3.6-UnifiedInstaller.tgz /opt/bika/
 
 RUN tar -xvf /opt/bika/Plone-4.3.6-UnifiedInstaller.tgz -C /opt/bika/
 
