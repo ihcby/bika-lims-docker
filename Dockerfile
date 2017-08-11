@@ -29,8 +29,6 @@ RUN apt-get update && apt-get install -y \
 
 ADD https://launchpad.net/plone/4.3/4.3.7/+download/Plone-4.3.7-UnifiedInstaller.tgz /opt/bika/
 
-RUN tar -xvf /opt/bika/Plone-4.3.7-UnifiedInstaller.tgz -C /opt/bika/
-
 RUN sudo /opt/bika/Plone-4.3.7-UnifiedInstaller/install.sh --target=/usr/local/Plone --password=adminpassword --build-python zeo
 
 # Adding bika.lims entry to the eggs section.
