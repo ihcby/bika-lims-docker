@@ -26,10 +26,10 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libxslt-dev
 
-
+# ADD automatically unpacks compressed files with recognized formats
 ADD https://launchpad.net/plone/4.3/4.3.10/+download/Plone-4.3.10-UnifiedInstaller.tgz /opt/bika/
 
-RUN sudo /opt/bika/Plone-4.3.10-UnifiedInstaller/install.sh --target=/usr/local/Plone --password=adminpassword --build-python zeo
+RUN sudo /opt/bika/Plone-4.3.10-UnifiedInstaller/install.sh --target=/usr/local/Plone --password=admin --build-python zeo
 
 # Adding bika.lims entry to the eggs section.
 RUN sed -ie '/^eggs =.*/{G;s/$/    bika.lims/;}'  /usr/local/Plone/zeocluster/buildout.cfg
