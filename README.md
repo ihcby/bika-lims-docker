@@ -7,6 +7,14 @@ docker build -t bika/lims:0.1 .
 ```bash
 docker run -d -p 8080:8080 --name bikalims bika/lims:0.1
 ```
+## To get persistent storage
+```bash
+docker volume create --name <volume_name>
+docker run -d -v <volume_name>:/usr/local/Plone/zeocluster/var bika/lims:0.1
+
+
+```
+
 
 ## Development
 For development purposes you can put tgz with install file next to this Dockerfile and replace line 
