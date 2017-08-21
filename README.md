@@ -11,8 +11,6 @@ docker run -d -p 8080:8080 --name bikalims bika/lims:0.1
 ```bash
 docker volume create --name <volume_name>
 docker run -d -v <volume_name>:/usr/local/Plone/zeocluster/var bika/lims:0.1
-
-
 ```
 
 
@@ -31,3 +29,8 @@ COPY ./Plone-4.3.6-UnifiedInstaller.tgz /opt/bika/
 * Using data directory
 * Backups
 * Version of the 
+
+## Pull image directly from Docker Hub (998MB)
+```bash
+docker pull juangallostra/bika_lims
+```
